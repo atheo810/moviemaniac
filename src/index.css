@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: "Montserrat";
   src: url("./assets/fonts/Montserrat-Regular.woff");
 }
@@ -12,4 +12,9 @@ body {
   background-color: #101010;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+}
+
+.align_center {
+  display: flex;
+  align-items: center;
 }
