@@ -13,7 +13,7 @@ export default function MovieCard() {
       />
       <div className="movie_details">
         <h3 className="movie_details_heading">Movie Name</h3>
-        <div className="movie_date_rate">
+        <div className="aling_center movie_date_rate">
           <p>10-20-2020</p>
           <p>
             8.0 <img src={Star} alt="rating icon" className="card_emoji" />
