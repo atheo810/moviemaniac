@@ -20,7 +20,7 @@ export default function MovieCard({ movie }) {
         <div className="aling_center movie_date_rate">
           <p>{movie.release_date}</p>
           <p>
-            {movie.rate_average}
+            {movie.vote_average}
             <img src={Star} alt="rating icon" className="card_emoji" />
           </p>
         </div>
