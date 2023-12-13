@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
-
+import _ from "lodash";
+// import css
 import "./MovieList.css";
 
+// import images
 import Fire from "../../assets/fire.png";
+// import components
 import MovieCard from "./MovieCard";
 import FilterGroup from "./FilterGroup";
+
 export default function MovieList() {
   const [movies, setMovies] = useState([]);
   const [filterMovies, setFilterMovies] = useState([]);
@@ -17,6 +21,13 @@ export default function MovieList() {
   useEffect(() => {
     fetchMovies();
   }, []);
+
+  useEffect(() => {
+    if (sort.by !== "default") {
+      const sortedMovies = _.orderBy(filterMovies, [sort.by], [sort.order]);
+      setFilterMovies(sortedMovies);
+    }
+  }, [sort]);
 
   const fetchMovies = async () => {
     const response = await fetch(
